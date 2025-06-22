@@ -100,16 +100,39 @@ img {
   padding: 0;
   border: none;
   background-color: transparent;
+  display: none;
 }
 .burger-icon {
   display: block;
   fill: #2f2f37;
 }
+
+@media screen and (max-width: 767px) {
+  .header-menu-list,
+  .header-address {
+    display: none;
+  }
+
+  .burger-btn {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  .header-menu-list,
+  .header-address {
+    display: flex;
+    gap: 40px;
+  }
+
   .burger-btn {
     display: none;
   }
+  .header-logo {
+    margin-right: 120px;
+  }
 }
+
 .header-menu-list {
   /* color: #2e2f42;
 
@@ -118,10 +141,8 @@ img {
   display: flex;
   align-items: center;
   gap: 40px;
-  .contacts {
-    display: none;
-  }
 }
+
 .header-menu-item-st {
   position: relative;
 }
@@ -511,8 +532,8 @@ img {
 }
 
 .features {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .visually-hidden {
   position: absolute;
@@ -560,7 +581,7 @@ img {
   line-height: 1.11;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  text-align: center;
+  text-align: left;
 }
 .features-item-text {
   font-weight: 500;
@@ -572,7 +593,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .features-container {
-    max-width: 736px;
+    max-width: 768px;
   }
 
   .features-list {
@@ -607,6 +628,7 @@ img {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
+    text-align: left;
   }
 
   .features-item-text {
@@ -633,8 +655,7 @@ img {
 .team {
   text-align: center;
   background-color: #f4f4fd;
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding: 96px 0;
 }
 
 .team-title {
@@ -745,6 +766,9 @@ img {
   fill: #f4f4fd;
 }
 @media screen and (min-width: 768px) {
+  .team {
+    padding: 96px 0;
+  }
   .team-container {
     padding-left: 108px;
     padding-right: 108px;
@@ -1120,13 +1144,13 @@ img {
 .footer-btn:focus {
   background-color: #404bbf;
 }
-.footer-subscribe-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.footer-send-icon {
+  /* transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); */
   fill: #fff;
-  margin-left: 16px;
+  /* margin-left: 16px;
 
   top: 8px;
-  right: 24px;
+  right: 24px; */
 }
 @media screen and (min-width: 768px) {
   .footer-container {
@@ -1142,6 +1166,9 @@ img {
   .footer-left {
     margin-right: 24px;
     text-align: left;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
   }
 
   .footer-text {
@@ -1155,6 +1182,9 @@ img {
   .footer-social-wrapper {
     text-align: left;
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .subscribe-part {
